@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(13, 117, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --main-ff: "Josefin Sans",
+        sans-serif;
+    --input-ff: "Roboto",
+        sans-serif;
+}
+
+.container {
+    max-width: 54em;
+    margin-top: 1em;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 1em;
+}
+
+.header {
+    text-align: center;
+    font-family: var(--main-ff);
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-bottom: 1em;
+}
+
+#newtask {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=text] {
+    flex-grow: 1;
+    margin-right: 10px;
+    width: 17em;
+    height: 2em;
+    padding-left: 1em;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 1.3rem;
+    transition: border-bottom 750ms;
+}
+
+input[type=text]:focus {
+    border-bottom: 1px solid rgb(13, 117, 236);
+}
+
+#tasks {
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.task {
+    border: 1px solid #939697;
+    margin-bottom: 10px;
+    background-color: #c5e1e6;
+    height: 3.9em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 0 1em;
+    align-items: center;
+    width: 22em;
+}
+
+.task span {
+    font-family: var(--input-ff);
+}
+
+#push {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: none;
+    outline: 0;
+    background-color: rgb(13, 117, 236);
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 700ms;
+}
+
+#push:hover {
+    color: rgb(13, 117, 236);
+    border: 1px solid rgb(13, 117, 236);
+    background-color: #fff;
+}
+
+.delete {
+    width: 2em;
+    height: 2em;
+    border-radius: 0.2em;
+    border: none;
+    outline: 0;
+    background-color: rgb(13, 117, 236);
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* Media Queries for Tablet */
+@media only screen and (max-width: 768px) {
+    #newtask {
+        flex-direction: column;
+    }
+
+    #newtask input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+}
